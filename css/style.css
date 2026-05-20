@@ -63,6 +63,7 @@ label {
 ========================= */
 
 .servico-card {
+
     height: 100%;
 
     min-height: 560px;
@@ -76,16 +77,19 @@ label {
 }
 
 .servico-card:hover {
+
     transform: translateY(-4px);
 
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
 }
 
-/* IMAGENS DOS SERVIÇOS */
+/* =========================
+   IMAGENS DOS SERVIÇOS
+========================= */
 
 .servico-card .card-img-top {
 
-    width: 82% !important;
+    width: 76% !important;
 
     height: auto !important;
 
@@ -98,7 +102,27 @@ label {
     box-shadow: 0 4px 12px rgba(0,0,0,.12);
 }
 
-/* CORPO DOS CARDS */
+/* AJUSTE ESPECÍFICO DO BANNER AZUL */
+
+.border-primary .card-img-top {
+
+    width: 72% !important;
+
+    margin-top: 22px !important;
+}
+
+/* AJUSTE ESPECÍFICO DO BANNER ROXO */
+
+.border-success .card-img-top {
+
+    width: 76% !important;
+
+    margin-top: 22px !important;
+}
+
+/* =========================
+   CORPO DOS CARDS
+========================= */
 
 .servico-card .card-body {
 
@@ -111,7 +135,9 @@ label {
     flex-direction: column;
 }
 
-/* BOTÕES DOS SERVIÇOS */
+/* =========================
+   BOTÕES DOS SERVIÇOS
+========================= */
 
 .servico-card .btn {
 
@@ -122,9 +148,12 @@ label {
     border-radius: 10px;
 }
 
-/* BOTÕES GERAIS */
+/* =========================
+   BOTÕES GERAIS
+========================= */
 
 .btn {
+
     border-radius: 10px;
 }
 
@@ -133,5 +162,6 @@ label {
 ========================= */
 
 footer {
+
     font-size: 0.95rem;
 }
