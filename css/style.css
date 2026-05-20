@@ -74,6 +74,8 @@ label {
 
     transition: transform 0.2s ease,
                 box-shadow 0.2s ease;
+
+    background-color: #ffffff;
 }
 
 .servico-card:hover {
@@ -95,29 +97,11 @@ label {
 
     display: block;
 
-    margin: 20px auto 0 auto !important;
+    margin: 14px auto 0 auto !important;
 
     border-radius: 14px !important;
 
     box-shadow: 0 4px 12px rgba(0,0,0,.12);
-}
-
-/* AJUSTE ESPECÍFICO DO BANNER AZUL */
-
-.border-primary .card-img-top {
-
-    width: 72% !important;
-
-    margin-top: 22px !important;
-}
-
-/* AJUSTE ESPECÍFICO DO BANNER ROXO */
-
-.border-success .card-img-top {
-
-    width: 76% !important;
-
-    margin-top: 22px !important;
 }
 
 /* =========================
@@ -136,6 +120,17 @@ label {
 }
 
 /* =========================
+   TÍTULOS DOS SERVIÇOS
+========================= */
+
+.servico-card h2 {
+
+    font-weight: 700;
+
+    margin-bottom: 1rem;
+}
+
+/* =========================
    BOTÕES DOS SERVIÇOS
 ========================= */
 
@@ -146,6 +141,8 @@ label {
     align-self: flex-start;
 
     border-radius: 10px;
+
+    padding: 10px 18px;
 }
 
 /* =========================
