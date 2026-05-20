@@ -1,28 +1,56 @@
-// Arquivo JavaScript da Fase 2 - Oreo Pet Shop 2
-document.addEventListener("DOMContentLoaded", function () {
-  const mensagem = document.getElementById("mensagem-boas-vindas");
-  if (mensagem) {
-    const hora = new Date().getHours();
-    let saudacao = "Olá";
-    if (hora < 12) { saudacao = "Bom dia"; }
-    else if (hora < 18) { saudacao = "Boa tarde"; }
-    else { saudacao = "Boa noite"; }
-    mensagem.textContent = saudacao + "! Cuidando do seu melhor amigo com carinho, segurança e qualidade.";
-  }
+// ======================================
+// Oreo Pet Shop 2 - JavaScript
+// Projeto acadêmico - Fase 2
+// ======================================
 
-  const formulario = document.getElementById("form-agendamento");
-  if (formulario) {
-    formulario.addEventListener("submit", function (evento) {
-      evento.preventDefault();
-      const nomeCliente = document.getElementById("nomeCliente").value;
-      const nomePet = document.getElementById("nomePet").value;
-      const servico = document.getElementById("servico").value;
-      const metodo = document.getElementById("metodo").value;
-      const data = document.getElementById("dataAgendamento").value;
-      const hora = document.getElementById("horaAgendamento").value;
-      const resumo = document.getElementById("resumo-agendamento");
-      resumo.classList.remove("d-none");
-      resumo.innerHTML = `<strong>Agendamento solicitado com sucesso!</strong><br>Cliente: ${nomeCliente}<br>Pet: ${nomePet}<br>Serviço: ${servico}<br>Método: ${metodo}<br>Data: ${data}<br>Horário: ${hora}`;
-    });
-  }
+// Espera o carregamento completo da página
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Seleciona o formulário
+    const formulario = document.getElementById("formAgendamento");
+
+    // Verifica se o formulário existe na página
+    if (formulario) {
+
+        // Evento de envio do formulário
+        formulario.addEventListener("submit", function (event) {
+
+            // Impede envio real
+            event.preventDefault();
+
+            // Captura os valores dos campos
+            const nomeCliente =
+                document.getElementById("nome").value;
+
+            const nomePet =
+                document.getElementById("nomePet").value;
+
+            const servico =
+                document.getElementById("servico").value;
+
+            const data =
+                document.getElementById("data").value;
+
+            const horario =
+                document.getElementById("horario").value;
+
+            // Mensagem de confirmação
+            alert(
+                "Agendamento realizado com sucesso!\n\n" +
+
+                "Cliente: " + nomeCliente + "\n" +
+
+                "Pet: " + nomePet + "\n" +
+
+                "Serviço: " + servico + "\n" +
+
+                "Data: " + data + "\n" +
+
+                "Horário: " + horario
+            );
+
+            // Limpa o formulário
+            formulario.reset();
+        });
+    }
 });
